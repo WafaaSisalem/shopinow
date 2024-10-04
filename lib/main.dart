@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopinow/config/constants/app_colors.dart';
 import 'package:shopinow/config/constants/app_texts.dart';
 import 'package:shopinow/config/routes/app_routes.dart';
 
@@ -16,7 +17,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: AppTexts.appTitle,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(useMaterial3: true, fontFamily: 'GeneralSans'),
+      theme: ThemeData(
+          useMaterial3: true,
+          fontFamily: 'GeneralSans',
+          scaffoldBackgroundColor: AppColors.primary000),
       initialRoute: AppRoutes.home,
       routes: {
         AppRoutes.home: (context) => const MyHomeScreen(),
